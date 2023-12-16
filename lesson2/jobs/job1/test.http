@@ -1,0 +1,4 @@
+POST 127.0.0.1:8082/
+Content-Type: application/json
+
+{"date":  "2022-08-11", "raw_dir":  "D:\\robotdreams\\"}
