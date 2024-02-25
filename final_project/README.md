@@ -2,7 +2,7 @@ In this project you will find pipelines to load data from Google Storage to Goog
 
 All dags are in folder dags
 The result data in GBQ looks like:
-![img.png](img.png)
+![img_2.png](img_2.png)
 The answer on the question is Taxes 1191
 
 The example of dag processing:
