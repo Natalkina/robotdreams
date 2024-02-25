@@ -1,0 +1,40 @@
+[2024-02-25T13:07:59.613+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.transform_data_to_silver scheduled__2022-09-18T01:00:00+00:00 [queued]>
+[2024-02-25T13:07:59.621+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.transform_data_to_silver scheduled__2022-09-18T01:00:00+00:00 [queued]>
+[2024-02-25T13:07:59.622+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2024-02-25T13:07:59.635+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryInsertJobOperator): transform_data_to_silver> on 2022-09-18 01:00:00+00:00
+[2024-02-25T13:07:59.640+0000] {standard_task_runner.py:60} INFO - Started process 2267 to run task
+[2024-02-25T13:07:59.642+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'transform_data_to_silver', 'scheduled__2022-09-18T01:00:00+00:00', '--job-id', '235', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmprb00q0a7']
+[2024-02-25T13:07:59.644+0000] {standard_task_runner.py:88} INFO - Job 235: Subtask transform_data_to_silver
+[2024-02-25T13:07:59.696+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.transform_data_to_silver scheduled__2022-09-18T01:00:00+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T13:07:59.759+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='transform_data_to_silver' AIRFLOW_CTX_EXECUTION_DATE='2022-09-18T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-09-18T01:00:00+00:00'
+[2024-02-25T13:07:59.769+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T13:07:59.772+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T13:07:59.773+0000] {bigquery.py:2806} INFO - Executing: {'query': {'query': "\n                    INSERT INTO `de-07-natalia-sokil.silver.sales` (client_id, purchase_date, product_name, price)\n                    SELECT\n                        CustomerId AS client_id,\n                        PARSE_DATE('%Y-%m-%d', PurchaseDate) AS purchase_date,\n                        Product AS product_name,\n                        CAST(REGEXP_REPLACE(Price, '[^0-9.]', '') AS FLOAT64) AS price\n                    FROM `de-07-natalia-sokil.bronze.sales`\n                ", 'useLegacySql': False}}'
+[2024-02-25T13:07:59.809+0000] {bigquery.py:1596} INFO - Inserting job ***_processing_sales_transform_data_to_silver_2022_09_18T01_00_00_00_00_401c10d94fb9f06811464c4ee5ccf449
+[2024-02-25T13:08:00.841+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2864, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1595, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1584, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 952, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Mismatch between format character '-' and string character '/' at string index: 4 with format: '%Y-%m-%d'
+
+Location: EU
+Job ID: airflow_processing_sales_transform_data_to_silver_2022_09_18T01_00_00_00_00_401c10d94fb9f06811464c4ee5ccf449
+
+[2024-02-25T13:08:00.849+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=processing_sales, task_id=transform_data_to_silver, execution_date=20220918T010000, start_date=20240225T130759, end_date=20240225T130800
+[2024-02-25T13:08:00.872+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 235 for task transform_data_to_silver (400 Mismatch between format character '-' and string character '/' at string index: 4 with format: '%Y-%m-%d'
+
+Location: EU
+Job ID: airflow_processing_sales_transform_data_to_silver_2022_09_18T01_00_00_00_00_401c10d94fb9f06811464c4ee5ccf449
+; 2267)
+[2024-02-25T13:08:00.899+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-25T13:08:00.915+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

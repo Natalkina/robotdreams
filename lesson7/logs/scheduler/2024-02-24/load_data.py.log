@@ -1,0 +1,189 @@
+[2024-02-24T09:35:40.483+0000] {processor.py:161} INFO - Started process (PID=8503) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:35:40.485+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:35:40.496+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:35:40.495+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:35:40.523+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:35:40.592+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:35:40.591+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:35:40.664+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:35:40.663+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:35:40.754+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.275 seconds
+[2024-02-24T09:36:11.693+0000] {processor.py:161} INFO - Started process (PID=8560) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:36:11.694+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:36:11.697+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:11.696+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:36:11.714+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:36:11.740+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:11.739+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:36:11.766+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:11.766+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:36:11.788+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.100 seconds
+[2024-02-24T09:36:41.833+0000] {processor.py:161} INFO - Started process (PID=8617) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:36:41.834+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:36:41.836+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:41.836+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:36:41.851+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:36:41.874+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:41.873+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:36:41.904+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:41.904+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:36:41.927+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.097 seconds
+[2024-02-24T09:37:12.391+0000] {processor.py:161} INFO - Started process (PID=8674) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:37:12.392+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:37:12.394+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:12.394+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:37:12.406+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:37:12.422+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:12.421+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:37:12.440+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:12.440+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:37:12.457+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.068 seconds
+[2024-02-24T09:37:42.540+0000] {processor.py:161} INFO - Started process (PID=8731) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:37:42.541+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:37:42.543+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:42.543+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:37:42.555+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:37:42.572+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:42.572+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:37:42.591+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:42.591+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:37:42.609+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.071 seconds
+[2024-02-24T09:38:13.082+0000] {processor.py:161} INFO - Started process (PID=8788) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:38:13.083+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:38:13.085+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:13.085+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:38:13.101+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:38:13.117+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:13.117+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:38:13.138+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:13.138+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:38:13.155+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.077 seconds
+[2024-02-24T09:38:43.679+0000] {processor.py:161} INFO - Started process (PID=8845) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:38:43.680+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:38:43.682+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:43.681+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:38:43.697+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:38:43.716+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:43.715+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:38:43.737+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:43.737+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:38:43.756+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.081 seconds
+[2024-02-24T09:39:14.374+0000] {processor.py:161} INFO - Started process (PID=8902) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:39:14.375+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:39:14.377+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:14.377+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:39:14.390+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:39:14.411+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:14.411+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:39:14.432+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:14.431+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:39:14.450+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.079 seconds
+[2024-02-24T09:39:45.343+0000] {processor.py:161} INFO - Started process (PID=8959) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:39:45.344+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:39:45.346+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:45.346+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:39:45.358+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:39:45.374+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:45.374+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:39:45.393+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:45.393+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:39:45.410+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.070 seconds
+[2024-02-24T09:40:16.120+0000] {processor.py:161} INFO - Started process (PID=9016) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:40:16.121+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:40:16.123+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:16.123+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:40:16.135+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:40:16.152+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:16.152+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:40:16.171+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:16.171+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:40:16.188+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.072 seconds
+[2024-02-24T09:40:46.996+0000] {processor.py:161} INFO - Started process (PID=9073) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:40:46.997+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:40:47.011+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:47.011+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:40:47.031+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:40:47.080+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:47.079+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:40:47.144+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:47.144+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:40:47.189+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.204 seconds
+[2024-02-24T09:41:17.652+0000] {processor.py:161} INFO - Started process (PID=9130) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:41:17.653+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:41:17.656+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:17.655+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:41:17.668+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:41:17.686+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:17.685+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:41:17.707+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:17.707+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:41:17.724+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.075 seconds
+[2024-02-24T09:41:47.946+0000] {processor.py:161} INFO - Started process (PID=9187) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:41:47.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:41:47.949+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:47.949+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:41:47.961+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:41:47.977+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:47.976+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:41:47.995+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:47.995+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:41:48.012+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.069 seconds
+[2024-02-24T09:42:18.604+0000] {processor.py:161} INFO - Started process (PID=9244) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:42:18.605+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:42:18.607+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:18.607+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:42:18.619+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:42:18.636+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:18.635+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:42:18.655+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:18.654+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:42:18.671+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.070 seconds
+[2024-02-24T09:42:49.284+0000] {processor.py:161} INFO - Started process (PID=9301) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:42:49.285+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:42:49.287+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:49.287+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:42:49.299+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:42:49.315+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:49.314+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:42:49.333+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:49.333+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:42:49.349+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.068 seconds
+[2024-02-24T09:43:20.092+0000] {processor.py:161} INFO - Started process (PID=9358) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:43:20.094+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:43:20.096+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:20.096+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:43:20.108+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:43:20.124+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:20.124+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:43:20.143+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:20.142+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:43:20.159+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.070 seconds
+[2024-02-24T09:43:50.728+0000] {processor.py:161} INFO - Started process (PID=9415) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:43:50.729+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:43:50.731+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:50.731+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:43:50.741+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:43:50.757+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:50.756+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:43:50.775+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:50.775+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:43:50.791+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.066 seconds
+[2024-02-24T09:44:21.567+0000] {processor.py:161} INFO - Started process (PID=9472) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:44:21.568+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:44:21.570+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:21.570+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:44:21.581+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:44:21.597+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:21.597+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:44:21.620+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:21.620+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:44:21.638+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.074 seconds
+[2024-02-24T09:44:52.318+0000] {processor.py:161} INFO - Started process (PID=9535) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:44:52.319+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:44:52.321+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:52.321+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:44:52.333+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:44:52.349+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:52.349+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:44:52.371+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:52.370+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:44:52.388+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.073 seconds
+[2024-02-24T09:45:23.040+0000] {processor.py:161} INFO - Started process (PID=9592) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:45:23.040+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:45:23.042+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:23.042+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:45:23.054+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:45:23.070+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:23.070+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:45:23.088+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:23.088+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:45:23.105+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.069 seconds
+[2024-02-24T09:45:53.971+0000] {processor.py:161} INFO - Started process (PID=9649) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:45:53.972+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:45:53.974+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:53.974+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:45:53.986+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:45:54.003+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:54.003+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:45:54.022+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:54.022+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:45:54.043+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.076 seconds
+[2024-02-24T09:46:24.727+0000] {processor.py:161} INFO - Started process (PID=9706) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:46:24.728+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:46:24.732+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:24.731+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:46:24.747+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:46:24.769+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:24.769+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:46:24.794+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:24.793+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:46:24.827+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.104 seconds
+[2024-02-24T09:46:55.543+0000] {processor.py:161} INFO - Started process (PID=9763) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:46:55.544+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:46:55.546+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:55.546+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:46:55.558+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:46:55.575+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:55.575+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:46:55.594+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:55.594+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:46:55.610+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.070 seconds
+[2024-02-24T09:47:26.343+0000] {processor.py:161} INFO - Started process (PID=9820) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:47:26.344+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:47:26.346+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:26.346+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:47:26.358+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:47:26.374+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:26.374+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:47:26.394+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:26.394+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:47:26.412+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.072 seconds
+[2024-02-24T09:47:57.130+0000] {processor.py:161} INFO - Started process (PID=9877) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:47:57.131+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:47:57.133+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:57.133+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:47:57.146+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:47:57.164+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:57.163+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:47:57.184+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:57.184+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:47:57.201+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.074 seconds
+[2024-02-24T09:48:28.176+0000] {processor.py:161} INFO - Started process (PID=9934) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:48:28.177+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:48:28.180+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:28.179+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:48:28.196+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:48:28.218+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:28.217+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:48:28.245+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:28.245+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:48:28.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.105 seconds
+[2024-02-24T09:48:58.617+0000] {processor.py:161} INFO - Started process (PID=9991) to work on /opt/airflow/dags/load_data.py
+[2024-02-24T09:48:58.618+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_data.py for tasks to queue
+[2024-02-24T09:48:58.620+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:58.620+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_data.py
+[2024-02-24T09:48:58.632+0000] {processor.py:840} INFO - DAG(s) 'data_to_google' retrieved from /opt/airflow/dags/load_data.py
+[2024-02-24T09:48:58.649+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:58.648+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:48:58.667+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:58.667+0000] {dag.py:3820} INFO - Setting next_dagrun for data_to_google to 2022-08-09T01:00:00+00:00, run_after=2022-08-10T01:00:00+00:00
+[2024-02-24T09:48:58.682+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_data.py took 0.068 seconds

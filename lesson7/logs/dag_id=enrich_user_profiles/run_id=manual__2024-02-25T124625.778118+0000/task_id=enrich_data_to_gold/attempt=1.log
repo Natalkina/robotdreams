@@ -1,0 +1,40 @@
+[2024-02-25T12:46:27.983+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_user_profiles.enrich_data_to_gold manual__2024-02-25T12:46:25.778118+00:00 [queued]>
+[2024-02-25T12:46:27.990+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_user_profiles.enrich_data_to_gold manual__2024-02-25T12:46:25.778118+00:00 [queued]>
+[2024-02-25T12:46:27.991+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-02-25T12:46:28.003+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryInsertJobOperator): enrich_data_to_gold> on 2024-02-25 12:46:25.778118+00:00
+[2024-02-25T12:46:28.007+0000] {standard_task_runner.py:60} INFO - Started process 1889 to run task
+[2024-02-25T12:46:28.010+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_user_profiles', 'enrich_data_to_gold', 'manual__2024-02-25T12:46:25.778118+00:00', '--job-id', '216', '--raw', '--subdir', 'DAGS_FOLDER/enrich_user_profiles.py', '--cfg-path', '/tmp/tmpi4cvntyy']
+[2024-02-25T12:46:28.011+0000] {standard_task_runner.py:88} INFO - Job 216: Subtask enrich_data_to_gold
+[2024-02-25T12:46:28.051+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_user_profiles.enrich_data_to_gold manual__2024-02-25T12:46:25.778118+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T12:46:28.109+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_user_profiles' AIRFLOW_CTX_TASK_ID='enrich_data_to_gold' AIRFLOW_CTX_EXECUTION_DATE='2024-02-25T12:46:25.778118+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-25T12:46:25.778118+00:00'
+[2024-02-25T12:46:28.118+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T12:46:28.122+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T12:46:28.123+0000] {bigquery.py:2806} INFO - Executing: {'query': {'query': '\n                         MERGE INTO `de-07-natalia-sokil.gold.user_profiles_enriched` TARGET\n                            USING (\n                                SELECT\n                                    c.client_id,\n                                    COALESCE(u.first_name, c.first_name) AS first_name,\n                                    COALESCE(u.last_name, c.last_name) AS last_name,\n                                    COALESCE(u.state, c.state) AS state,\n                                    c.email,\n                                    c.registration_date,\n                                    u.phone_number\n                                FROM `de-07-natalia-sokil.silver.customers` c\n                                LEFT JOIN `de-07-natalia-sokil.silver.user_profiles` u ON c.client_id = u.client_id\n                            ) SOURCE\n                            ON TARGET.client_id = SOURCE.client_id\n                    \n                            WHEN MATCHED THEN\n                                UPDATE SET\n                                    TARGET.first_name = SOURCE.first_name,\n                                    TARGET.last_name = SOURCE.last_name,\n                                    TARGET.state = SOURCE.state,\n                                    TARGET.email = SOURCE.email,\n                                    TARGET.registration_date = SOURCE.registration_date,\n                                    TARGET.phone_number = SOURCE.phone_number\n                    \n                            WHEN NOT MATCHED THEN\n                                INSERT (client_id, first_name, last_name, state, email, registration_date, phone_number)\n                                VALUES (SOURCE.client_id, SOURCE.first_name, SOURCE.last_name, SOURCE.state, SOURCE.email, SOURCE.registration_date, SOURCE.phone_number);\n                    ', 'useLegacySql': False}}'
+[2024-02-25T12:46:28.164+0000] {bigquery.py:1596} INFO - Inserting job ***_enrich_user_profiles_enrich_data_to_gold_2024_02_25T12_46_25_778118_00_00_2ee038c4057bb2bacdfe2cdf42cf4970
+[2024-02-25T12:46:28.601+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2864, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1595, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1584, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 952, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Dataset de-07-natalia-sokil:gold was not found in location EU
+
+Location: EU
+Job ID: airflow_enrich_user_profiles_enrich_data_to_gold_2024_02_25T12_46_25_778118_00_00_2ee038c4057bb2bacdfe2cdf42cf4970
+
+[2024-02-25T12:46:28.608+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=enrich_user_profiles, task_id=enrich_data_to_gold, execution_date=20240225T124625, start_date=20240225T124627, end_date=20240225T124628
+[2024-02-25T12:46:28.618+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 216 for task enrich_data_to_gold (404 Not found: Dataset de-07-natalia-sokil:gold was not found in location EU
+
+Location: EU
+Job ID: airflow_enrich_user_profiles_enrich_data_to_gold_2024_02_25T12_46_25_778118_00_00_2ee038c4057bb2bacdfe2cdf42cf4970
+; 1889)
+[2024-02-25T12:46:28.664+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-25T12:46:28.678+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,44 @@
+[2024-02-25T10:42:38.498+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-08-05T01:00:00+00:00 [queued]>
+[2024-02-25T10:42:38.505+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-08-05T01:00:00+00:00 [queued]>
+[2024-02-25T10:42:38.505+0000] {taskinstance.py:2171} INFO - Starting attempt 4 of 4
+[2024-02-25T10:42:38.515+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryCreateEmptyDatasetOperator): create_bronze_dataset> on 2022-08-05 01:00:00+00:00
+[2024-02-25T10:42:38.519+0000] {standard_task_runner.py:60} INFO - Started process 129 to run task
+[2024-02-25T10:42:38.522+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'create_bronze_dataset', 'scheduled__2022-08-05T01:00:00+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmphp1qwe5i']
+[2024-02-25T10:42:38.523+0000] {standard_task_runner.py:88} INFO - Job 88: Subtask create_bronze_dataset
+[2024-02-25T10:42:38.563+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-08-05T01:00:00+00:00 [running]> on host 14ee3b1c5c12
+[2024-02-25T10:42:38.620+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='create_bronze_dataset' AIRFLOW_CTX_EXECUTION_DATE='2022-08-05T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-05T01:00:00+00:00'
+[2024-02-25T10:42:38.629+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T10:42:38.633+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T10:42:38.634+0000] {bigquery.py:469} INFO - datasetId was not specified in `dataset_reference`. Will use default value bronze.
+[2024-02-25T10:42:38.634+0000] {bigquery.py:469} INFO - projectId was not specified in `dataset_reference`. Will use default value de-07-natalia-sokil.
+[2024-02-25T10:42:38.634+0000] {bigquery.py:480} INFO - Creating dataset: bronze in project: de-07-natalia-sokil 
+[2024-02-25T10:42:38.635+0000] {logging_mixin.py:188} INFO - VEFORE
+[2024-02-25T10:42:38.635+0000] {logging_mixin.py:188} INFO - path None
+[2024-02-25T10:42:38.635+0000] {logging_mixin.py:188} INFO - dict ***
+[2024-02-25T10:42:38.640+0000] {logging_mixin.py:188} INFO - {'keyfile_dict': '{   "type": "service_account",   "project_id": "de-07-natalia-sokil",   "private_key_id": "d83892605d061c9b801620e6060fd877513f52aa",   "private_key": "-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCccawS8eAcdaap\\nLZKrN86P5aHKkJfTYH/+AF8C8F/yduhkQSI/QJBLnf7cdNY3lPNAhS1TeOvgSJsT\\nwHFVUyTd5hTK1Ssz57a7Yd9Hh+AL9zSZX2QfZk0qknYI19VM5JxC728N3BGkLXPA\\n0yNXBxZig+7fAzxB7g7XSsD71gHIchbUNvtfQlDHiVk5vhxvIlbKKO3VrFd0SzXx\\nyyXBGffdoGXegiLfASawG/7q7BDSrEVNJF1MLi6H0ohHweDYqF/DcZl0UY3c7X3r\\n+vX5wh5344N6UpeyNm8d64Kb1yaYVnJcKBQRn/Dkq8eZ+ElUClO8JaI3VvASkP6N\\ncrze0ZbdAgMBAAECggEACruBoosVZN5tYI3P0g8yDI0kXFEvGUE1hqdf3UPAUVH2\\n/2m4f75eJ9He+iDJ0WZWicaZJXDWPby9Zs18+O2LSe3O31tga18qGhDM0Itxw2Bi\\nK2Nv6veJs7H4hwLHj07fqXfjln/SdgDoQAI8GmxSDNAgQwxlxeAfBIYMVzqHRMjz\\nZSx+ISz2o5tQIvBp769yhzTR8iIXmFz2ooRlcjzb1AxT5xCrug49dadTLrsSFCeD\\neWHZp7awYwkwPlj9PRNfM4mLkxYUinC/x1UDeDzAXXw7f8C6EjD9foGVnsF23Krq\\nPQET0TN9OagPHj3DyYY6Da+KF1NIB8MCazTwtHUBwQKBgQDU5GkVnei9cxLEu5T8\\nzBIEiMvJfvyiP2Bs0HYuuXuoxOWcWItXRx7oW4pNthRx9WEI+IcN5jgagWee9MAF\\nJ36l7wmfttrJE5Pd1ggkw/e+SW4tcWpmRo2d8LCtfjSHGDRniLoI3C5dGQi9H3xP\\nqxY9nIHXBmJFT1x9OHGau9jsDwKBgQC8Hy8wl7jJ9ZrO5fypMnj2xfTDX5EXALqO\\n2o3oE1SgIHbrCc2jzuOjO7Lls5M/QAzZ41fmFcVVEM4G9Y5ojoJO2HaaRgZHCNI1\\n8iU4UDKnkfRednIcTPcvCqm+UhJcMMWihG/Rrxseb1Je2H+A/Rv31jYG7bBgVxMg\\n3T1+htwSUwKBgQDOWmeRUHJbz8KNdtU/A/8i7gW51aDDE3M/hgBH4fn+6Hs3RIwr\\nmQBYcQJpuOewXgwkSeF+k3wmFPB/nvTRCis0Y7KMYQ1IgfV9vQw/tsPYagyld52O\\nbSyvvrFCOWZo3AlPobPRCrrV+oIB7xbrkgYIyj8AUWvHitk3dxKGzTXB+QKBgF1F\\n4PHo6BhKjD01TvbdLZi9QcR0581N8THPLzj4DKdwMUYMEEe91qQif2rghIuByF1o\\nGTbdaH/q2xwcOEWjEvzg2r1XJtmliARzUP0A1ny7IzyK4b0idBSA5vSUYMIQ9IzF\\nuWNvvLR0YZThJybfWDSjoxoAU8kQo01SJKFNYGQ9AoGBAJmcXkJu88YQyXXKEk4M\\nnJnIyx94lkFHMtV9FQpCt8z3MLAk5T8ndSjRHoE1ENa9BiK95t2W2IxD+p/xAEzF\\nJewE9C5zHB7n4Hk/MqU2zkE634XQTlJa8jLUhOwvqmg24PnAYTR5HzIt/q8ojh5G\\ncbQ/SujXDqzyOmIYV+EtqStm\\n-----END PRIVATE KEY-----\\n",   "client_email": "credentions@de-07-natalia-sokil.iam.gserviceaccount.com",   "client_id": "103811747982007749447",   "auth_uri": "https://accounts.google.com/o/oauth2/auth",   "token_uri": "https://oauth2.googleapis.com/token",   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/credentions%40de-07-natalia-sokil.iam.gserviceaccount.com",   "universe_domain": "googleapis.com" }', 'scope': 'https://www.googleapis.com/auth/cloud-platform', 'num_retries': 5}
+[2024-02-25T10:42:38.640+0000] {logging_mixin.py:188} INFO - ***
+[2024-02-25T10:42:39.528+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2014, in execute
+    dataset = bq_hook.create_empty_dataset(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 484, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 481, in create_empty_dataset
+    dataset_object = self.get_client(project_id=project_id, location=location).create_dataset(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 668, in create_dataset
+    api_response = self._call_api(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 818, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry.py", line 372, in retry_wrapped_func
+    return retry_target(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry.py", line 207, in retry_target
+    result = target()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 POST https://bigquery.googleapis.com/bigquery/v2/projects/de-07-natalia-sokil/datasets?prettyPrint=false: Access Denied: Project de-07-natalia-sokil: User does not have bigquery.datasets.create permission in project de-07-natalia-sokil.
+[2024-02-25T10:42:39.536+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=processing_sales, task_id=create_bronze_dataset, execution_date=20220805T010000, start_date=20240225T104238, end_date=20240225T104239
+[2024-02-25T10:42:39.545+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 88 for task create_bronze_dataset (403 POST https://bigquery.googleapis.com/bigquery/v2/projects/de-07-natalia-sokil/datasets?prettyPrint=false: Access Denied: Project de-07-natalia-sokil: User does not have bigquery.datasets.create permission in project de-07-natalia-sokil.; 129)
+[2024-02-25T10:42:39.576+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-25T10:42:39.597+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

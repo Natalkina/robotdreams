@@ -1,0 +1,130 @@
+[2024-02-20T20:45:46.806+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T20:45:46.813+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T20:45:46.814+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 5
+[2024-02-20T20:45:46.826+0000] {taskinstance.py:2192} INFO - Executing <Task(GCSToBigQueryOperator): load_data_to_bronze> on 2022-08-01 01:00:00+00:00
+[2024-02-20T20:45:46.831+0000] {standard_task_runner.py:60} INFO - Started process 1943 to run task
+[2024-02-20T20:45:46.833+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'load_data_to_bronze', 'scheduled__2022-08-01T01:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmpiesjpshh']
+[2024-02-20T20:45:46.834+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask load_data_to_bronze
+[2024-02-20T20:45:46.879+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [running]> on host 483c6a14d6cc
+[2024-02-20T20:45:46.941+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='load_data_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2022-08-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-01T01:00:00+00:00'
+[2024-02-20T20:45:46.950+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-20T20:45:46.952+0000] {base.py:83} INFO - Using connection ID 'google-cloud' for task execution.
+[2024-02-20T20:45:46.953+0000] {gcs_to_bigquery.py:379} INFO - Using existing BigQuery table for storing data...
+[2024-02-20T20:45:46.960+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 259, in get_credentials_and_project_id
+    keyfile_dict_json = json.loads(keyfile_dict)
+  File "/usr/local/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 380, in execute
+    self.configuration = self._use_existing_table()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 581, in _use_existing_table
+    default_project_id=self.hook.project_id,
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 361, in project_id
+    _, project_id = self.get_credentials_and_project_id()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 261, in get_credentials_and_project_id
+    raise AirflowException("Invalid key JSON.")
+airflow.exceptions.AirflowException: Invalid key JSON.
+[2024-02-20T20:45:46.964+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=processing_sales, task_id=load_data_to_bronze, execution_date=20220801T010000, start_date=20240220T204546, end_date=20240220T204546
+[2024-02-20T20:45:46.975+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 7 for task load_data_to_bronze (Invalid key JSON.; 1943)
+[2024-02-20T20:45:47.005+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-20T20:45:47.026+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-20T21:06:53.120+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T21:06:53.130+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T21:06:53.131+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 4
+[2024-02-20T21:06:53.144+0000] {taskinstance.py:2192} INFO - Executing <Task(GCSToBigQueryOperator): load_data_to_bronze> on 2022-08-01 01:00:00+00:00
+[2024-02-20T21:06:53.149+0000] {standard_task_runner.py:60} INFO - Started process 2699 to run task
+[2024-02-20T21:06:53.153+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'load_data_to_bronze', 'scheduled__2022-08-01T01:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmp04sfchpw']
+[2024-02-20T21:06:53.154+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask load_data_to_bronze
+[2024-02-20T21:06:53.205+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [running]> on host 483c6a14d6cc
+[2024-02-20T21:06:53.279+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='load_data_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2022-08-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-01T01:00:00+00:00'
+[2024-02-20T21:06:53.291+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-20T21:06:53.292+0000] {base.py:83} INFO - Using connection ID 'google-cloud' for task execution.
+[2024-02-20T21:06:53.294+0000] {gcs_to_bigquery.py:379} INFO - Using existing BigQuery table for storing data...
+[2024-02-20T21:06:53.302+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 259, in get_credentials_and_project_id
+    keyfile_dict_json = json.loads(keyfile_dict)
+  File "/usr/local/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 380, in execute
+    self.configuration = self._use_existing_table()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 581, in _use_existing_table
+    default_project_id=self.hook.project_id,
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 361, in project_id
+    _, project_id = self.get_credentials_and_project_id()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 261, in get_credentials_and_project_id
+    raise AirflowException("Invalid key JSON.")
+airflow.exceptions.AirflowException: Invalid key JSON.
+[2024-02-20T21:06:53.307+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=processing_sales, task_id=load_data_to_bronze, execution_date=20220801T010000, start_date=20240220T210653, end_date=20240220T210653
+[2024-02-20T21:06:53.318+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 13 for task load_data_to_bronze (Invalid key JSON.; 2699)
+[2024-02-20T21:06:53.366+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-20T21:06:53.406+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-20T21:12:40.209+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T21:12:40.219+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T21:12:40.220+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 5
+[2024-02-20T21:12:40.235+0000] {taskinstance.py:2192} INFO - Executing <Task(GCSToBigQueryOperator): load_data_to_bronze> on 2022-08-01 01:00:00+00:00
+[2024-02-20T21:12:40.241+0000] {standard_task_runner.py:60} INFO - Started process 2808 to run task
+[2024-02-20T21:12:40.246+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'load_data_to_bronze', 'scheduled__2022-08-01T01:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmpfekxm349']
+[2024-02-20T21:12:40.247+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask load_data_to_bronze
+[2024-02-20T21:12:40.313+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [running]> on host 483c6a14d6cc
+[2024-02-20T21:12:40.408+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='load_data_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2022-08-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-01T01:00:00+00:00'
+[2024-02-20T21:12:40.423+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-20T21:12:40.425+0000] {base.py:83} INFO - Using connection ID 'google-cloud' for task execution.
+[2024-02-20T21:12:40.427+0000] {gcs_to_bigquery.py:379} INFO - Using existing BigQuery table for storing data...
+[2024-02-20T21:12:40.428+0000] {logging_mixin.py:188} INFO - BEFORE
+[2024-02-20T21:12:40.428+0000] {logging_mixin.py:188} INFO - ***
+[2024-02-20T21:12:40.429+0000] {logging_mixin.py:188} INFO - AFTER
+[2024-02-20T21:12:40.430+0000] {logging_mixin.py:188} INFO - Expecting value: line 1 column 1 (char 0)
+[2024-02-20T21:12:40.441+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 262, in get_credentials_and_project_id
+    keyfile_dict_json = json.loads(keyfile_dict)
+  File "/usr/local/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 380, in execute
+    self.configuration = self._use_existing_table()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 581, in _use_existing_table
+    default_project_id=self.hook.project_id,
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 365, in project_id
+    _, project_id = self.get_credentials_and_project_id()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 265, in get_credentials_and_project_id
+    raise AirflowException("Invalid key JSON. wazaaaaaap")
+airflow.exceptions.AirflowException: Invalid key JSON. wazaaaaaap
+[2024-02-20T21:12:40.446+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=processing_sales, task_id=load_data_to_bronze, execution_date=20220801T010000, start_date=20240220T211240, end_date=20240220T211240
+[2024-02-20T21:12:40.463+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 16 for task load_data_to_bronze (Invalid key JSON. wazaaaaaap; 2808)
+[2024-02-20T21:12:40.498+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-20T21:12:40.532+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

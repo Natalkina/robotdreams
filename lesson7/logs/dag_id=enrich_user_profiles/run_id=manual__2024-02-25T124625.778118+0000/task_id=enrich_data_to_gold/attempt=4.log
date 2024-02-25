@@ -1,0 +1,40 @@
+[2024-02-25T13:10:27.171+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_user_profiles.enrich_data_to_gold manual__2024-02-25T12:46:25.778118+00:00 [queued]>
+[2024-02-25T13:10:27.177+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_user_profiles.enrich_data_to_gold manual__2024-02-25T12:46:25.778118+00:00 [queued]>
+[2024-02-25T13:10:27.178+0000] {taskinstance.py:2171} INFO - Starting attempt 4 of 4
+[2024-02-25T13:10:27.190+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryInsertJobOperator): enrich_data_to_gold> on 2024-02-25 12:46:25.778118+00:00
+[2024-02-25T13:10:27.195+0000] {standard_task_runner.py:60} INFO - Started process 2311 to run task
+[2024-02-25T13:10:27.198+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_user_profiles', 'enrich_data_to_gold', 'manual__2024-02-25T12:46:25.778118+00:00', '--job-id', '236', '--raw', '--subdir', 'DAGS_FOLDER/enrich_user_profiles.py', '--cfg-path', '/tmp/tmpv2xqdg8l']
+[2024-02-25T13:10:27.199+0000] {standard_task_runner.py:88} INFO - Job 236: Subtask enrich_data_to_gold
+[2024-02-25T13:10:27.241+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_user_profiles.enrich_data_to_gold manual__2024-02-25T12:46:25.778118+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T13:10:27.300+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_user_profiles' AIRFLOW_CTX_TASK_ID='enrich_data_to_gold' AIRFLOW_CTX_EXECUTION_DATE='2024-02-25T12:46:25.778118+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-25T12:46:25.778118+00:00'
+[2024-02-25T13:10:27.309+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T13:10:27.312+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T13:10:27.313+0000] {bigquery.py:2806} INFO - Executing: {'query': {'query': "\n                         MERGE INTO `de-07-natalia-sokil.gold.user_profiles_enriched` AS TARGET\n        USING (\n            SELECT\n                c.client_id,\n                IFNULL(c.first_name, SPLIT(u.full_name, ' ')[OFFSET(0)]) AS first_name,\n                IFNULL(c.last_name, SPLIT(u.full_name, ' ')[SAFE_OFFSET(1)]) AS last_name,\n                c.email,\n                c.registration_date,\n                IFNULL(c.state, u.state) AS state,\n                u.birth_date,\n                u.phone_number\n            FROM `de-07-natalia-sokil.silver.customers` c\n            JOIN `de-07-natalia-sokil.silver.user_profiles` u\n            ON c.email = u.email\n        ) AS SOURCE\n        ON TARGET.email = SOURCE.email\n        \n        WHEN MATCHED THEN\n            UPDATE SET\n                TARGET.client_id = SOURCE.client_id,\n                TARGET.first_name = SOURCE.first_name,\n                TARGET.last_name = SOURCE.last_name,\n                TARGET.registration_date = SOURCE.registration_date,\n                TARGET.state = SOURCE.state,\n                TARGET.birth_date = SOURCE.birth_date,\n                TARGET.phone_number = SOURCE.phone_number\n                \n        WHEN NOT MATCHED THEN\n            INSERT (client_id, first_name, last_name, email, registration_date, state, birth_date, phone_number)\n            VALUES (SOURCE.client_id, SOURCE.first_name, SOURCE.last_name, SOURCE.email, SOURCE.registration_date, SOURCE.state, SOURCE.birth_date, SOURCE.phone_number);\n                    ", 'useLegacySql': False}}'
+[2024-02-25T13:10:27.350+0000] {bigquery.py:1596} INFO - Inserting job ***_enrich_user_profiles_enrich_data_to_gold_2024_02_25T12_46_25_778118_00_00_72ca97834fd711ac6a2a0d5faf89b0ac
+[2024-02-25T13:10:27.820+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2864, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1595, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1584, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 952, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Table de-07-natalia-sokil:gold.user_profiles_enriched was not found in location EU
+
+Location: EU
+Job ID: airflow_enrich_user_profiles_enrich_data_to_gold_2024_02_25T12_46_25_778118_00_00_72ca97834fd711ac6a2a0d5faf89b0ac
+
+[2024-02-25T13:10:27.829+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=enrich_user_profiles, task_id=enrich_data_to_gold, execution_date=20240225T124625, start_date=20240225T131027, end_date=20240225T131027
+[2024-02-25T13:10:27.841+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 236 for task enrich_data_to_gold (404 Not found: Table de-07-natalia-sokil:gold.user_profiles_enriched was not found in location EU
+
+Location: EU
+Job ID: airflow_enrich_user_profiles_enrich_data_to_gold_2024_02_25T12_46_25_778118_00_00_72ca97834fd711ac6a2a0d5faf89b0ac
+; 2311)
+[2024-02-25T13:10:27.852+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-25T13:10:27.866+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

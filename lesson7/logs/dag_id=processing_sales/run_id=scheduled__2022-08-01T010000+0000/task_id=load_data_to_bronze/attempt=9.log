@@ -1,0 +1,31 @@
+[2024-02-20T21:25:59.586+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T21:25:59.596+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [queued]>
+[2024-02-20T21:25:59.597+0000] {taskinstance.py:2171} INFO - Starting attempt 9 of 12
+[2024-02-20T21:25:59.614+0000] {taskinstance.py:2192} INFO - Executing <Task(GCSToBigQueryOperator): load_data_to_bronze> on 2022-08-01 01:00:00+00:00
+[2024-02-20T21:25:59.621+0000] {standard_task_runner.py:60} INFO - Started process 891 to run task
+[2024-02-20T21:25:59.625+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'load_data_to_bronze', 'scheduled__2022-08-01T01:00:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmpsbg3wlo_']
+[2024-02-20T21:25:59.627+0000] {standard_task_runner.py:88} INFO - Job 23: Subtask load_data_to_bronze
+[2024-02-20T21:25:59.692+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-08-01T01:00:00+00:00 [running]> on host 14ee3b1c5c12
+[2024-02-20T21:25:59.767+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='load_data_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2022-08-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-01T01:00:00+00:00'
+[2024-02-20T21:25:59.779+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-20T21:25:59.781+0000] {base.py:83} INFO - Using connection ID 'google-cloud' for task execution.
+[2024-02-20T21:25:59.782+0000] {gcs_to_bigquery.py:379} INFO - Using existing BigQuery table for storing data...
+[2024-02-20T21:25:59.783+0000] {logging_mixin.py:188} INFO - VEFORE
+[2024-02-20T21:25:59.783+0000] {logging_mixin.py:188} INFO - ***
+[2024-02-20T21:25:59.784+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 380, in execute
+    self.configuration = self._use_existing_table()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 581, in _use_existing_table
+    default_project_id=self.hook.project_id,
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 367, in project_id
+    _, project_id = self.get_credentials_and_project_id()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 261, in get_credentials_and_project_id
+    print(keyfile_dist)
+NameError: name 'keyfile_dist' is not defined
+[2024-02-20T21:25:59.794+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=processing_sales, task_id=load_data_to_bronze, execution_date=20220801T010000, start_date=20240220T212559, end_date=20240220T212559
+[2024-02-20T21:25:59.808+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 23 for task load_data_to_bronze (name 'keyfile_dist' is not defined; 891)
+[2024-02-20T21:25:59.837+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-20T21:25:59.862+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

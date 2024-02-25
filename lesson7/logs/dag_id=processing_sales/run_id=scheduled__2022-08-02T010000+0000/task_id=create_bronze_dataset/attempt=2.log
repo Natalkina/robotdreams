@@ -1,0 +1,102 @@
+[2024-02-21T15:52:12.920+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-08-02T01:00:00+00:00 [queued]>
+[2024-02-21T15:52:12.942+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-08-02T01:00:00+00:00 [queued]>
+[2024-02-21T15:52:12.943+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 4
+[2024-02-21T15:52:12.982+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryCreateEmptyDatasetOperator): create_bronze_dataset> on 2022-08-02 01:00:00+00:00
+[2024-02-21T15:52:12.993+0000] {standard_task_runner.py:60} INFO - Started process 1500 to run task
+[2024-02-21T15:52:13.003+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'create_bronze_dataset', 'scheduled__2022-08-02T01:00:00+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmpaba0hv9p']
+[2024-02-21T15:52:13.009+0000] {standard_task_runner.py:88} INFO - Job 40: Subtask create_bronze_dataset
+[2024-02-21T15:52:13.103+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-08-02T01:00:00+00:00 [running]> on host 14ee3b1c5c12
+[2024-02-21T15:52:13.261+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='create_bronze_dataset' AIRFLOW_CTX_EXECUTION_DATE='2022-08-02T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-02T01:00:00+00:00'
+[2024-02-21T15:52:13.313+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-21T15:52:13.322+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-21T15:52:13.323+0000] {bigquery.py:469} INFO - datasetId was not specified in `dataset_reference`. Will use default value bronze.
+[2024-02-21T15:52:13.324+0000] {bigquery.py:469} INFO - projectId was not specified in `dataset_reference`. Will use default value de-07-natalia-sokil.
+[2024-02-21T15:52:13.325+0000] {bigquery.py:480} INFO - Creating dataset: bronze in project: de-07-natalia-sokil 
+[2024-02-21T15:52:13.325+0000] {logging_mixin.py:188} INFO - VEFORE
+[2024-02-21T15:52:13.326+0000] {logging_mixin.py:188} INFO - path None
+[2024-02-21T15:52:13.327+0000] {logging_mixin.py:188} INFO - dict ***
+[2024-02-21T15:52:13.336+0000] {logging_mixin.py:188} INFO - {'keyfile_dict': '{   "type": "service_account",   "project_id": "de-07-natalia-sokil",   "private_key_id": "d83892605d061c9b801620e6060fd877513f52aa",   "private_key": "-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCccawS8eAcdaap\\nLZKrN86P5aHKkJfTYH/+AF8C8F/yduhkQSI/QJBLnf7cdNY3lPNAhS1TeOvgSJsT\\nwHFVUyTd5hTK1Ssz57a7Yd9Hh+AL9zSZX2QfZk0qknYI19VM5JxC728N3BGkLXPA\\n0yNXBxZig+7fAzxB7g7XSsD71gHIchbUNvtfQlDHiVk5vhxvIlbKKO3VrFd0SzXx\\nyyXBGffdoGXegiLfASawG/7q7BDSrEVNJF1MLi6H0ohHweDYqF/DcZl0UY3c7X3r\\n+vX5wh5344N6UpeyNm8d64Kb1yaYVnJcKBQRn/Dkq8eZ+ElUClO8JaI3VvASkP6N\\ncrze0ZbdAgMBAAECggEACruBoosVZN5tYI3P0g8yDI0kXFEvGUE1hqdf3UPAUVH2\\n/2m4f75eJ9He+iDJ0WZWicaZJXDWPby9Zs18+O2LSe3O31tga18qGhDM0Itxw2Bi\\nK2Nv6veJs7H4hwLHj07fqXfjln/SdgDoQAI8GmxSDNAgQwxlxeAfBIYMVzqHRMjz\\nZSx+ISz2o5tQIvBp769yhzTR8iIXmFz2ooRlcjzb1AxT5xCrug49dadTLrsSFCeD\\neWHZp7awYwkwPlj9PRNfM4mLkxYUinC/x1UDeDzAXXw7f8C6EjD9foGVnsF23Krq\\nPQET0TN9OagPHj3DyYY6Da+KF1NIB8MCazTwtHUBwQKBgQDU5GkVnei9cxLEu5T8\\nzBIEiMvJfvyiP2Bs0HYuuXuoxOWcWItXRx7oW4pNthRx9WEI+IcN5jgagWee9MAF\\nJ36l7wmfttrJE5Pd1ggkw/e+SW4tcWpmRo2d8LCtfjSHGDRniLoI3C5dGQi9H3xP\\nqxY9nIHXBmJFT1x9OHGau9jsDwKBgQC8Hy8wl7jJ9ZrO5fypMnj2xfTDX5EXALqO\\n2o3oE1SgIHbrCc2jzuOjO7Lls5M/QAzZ41fmFcVVEM4G9Y5ojoJO2HaaRgZHCNI1\\n8iU4UDKnkfRednIcTPcvCqm+UhJcMMWihG/Rrxseb1Je2H+A/Rv31jYG7bBgVxMg\\n3T1+htwSUwKBgQDOWmeRUHJbz8KNdtU/A/8i7gW51aDDE3M/hgBH4fn+6Hs3RIwr\\nmQBYcQJpuOewXgwkSeF+k3wmFPB/nvTRCis0Y7KMYQ1IgfV9vQw/tsPYagyld52O\\nbSyvvrFCOWZo3AlPobPRCrrV+oIB7xbrkgYIyj8AUWvHitk3dxKGzTXB+QKBgF1F\\n4PHo6BhKjD01TvbdLZi9QcR0581N8THPLzj4DKdwMUYMEEe91qQif2rghIuByF1o\\nGTbdaH/q2xwcOEWjEvzg2r1XJtmliARzUP0A1ny7IzyK4b0idBSA5vSUYMIQ9IzF\\nuWNvvLR0YZThJybfWDSjoxoAU8kQo01SJKFNYGQ9AoGBAJmcXkJu88YQyXXKEk4M\\nnJnIyx94lkFHMtV9FQpCt8z3MLAk5T8ndSjRHoE1ENa9BiK95t2W2IxD+p/xAEzF\\nJewE9C5zHB7n4Hk/MqU2zkE634XQTlJa8jLUhOwvqmg24PnAYTR5HzIt/q8ojh5G\\ncbQ/SujXDqzyOmIYV+EtqStm\\n-----END PRIVATE KEY-----\\n",   "client_email": "credentions@de-07-natalia-sokil.iam.gserviceaccount.com",   "client_id": "103811747982007749447",   "auth_uri": "https://accounts.google.com/o/oauth2/auth",   "token_uri": "https://oauth2.googleapis.com/token",   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/credentions%40de-07-natalia-sokil.iam.gserviceaccount.com",   "universe_domain": "googleapis.com" }', 'scope': 'https://www.googleapis.com/auth/cloud-platform', 'num_retries': 5}
+[2024-02-21T15:52:13.337+0000] {logging_mixin.py:188} INFO - ***
+[2024-02-21T15:52:30.314+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0960bf43d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2024-02-23T17:20:05.556+0000] {local_task_job_runner.py:211} ERROR - Heartbeat time limit exceeded!
+[2024-02-23T17:20:05.643+0000] {process_utils.py:131} INFO - Sending 15 to group 1500. PIDs of all processes in the group: [1500]
+[2024-02-23T17:20:05.654+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0960bf4550>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2024-02-23T17:20:05.677+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 1500
+[2024-02-23T17:20:05.739+0000] {taskinstance.py:2451} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-02-23T17:20:05.838+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2014, in execute
+    dataset = bq_hook.create_empty_dataset(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 484, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 481, in create_empty_dataset
+    dataset_object = self.get_client(project_id=project_id, location=location).create_dataset(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 668, in create_dataset
+    api_response = self._call_api(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 818, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry.py", line 372, in retry_wrapped_func
+    return retry_target(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry.py", line 207, in retry_target
+    result = target()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/_http/__init__.py", line 482, in api_request
+    response = self._make_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/_http/__init__.py", line 341, in _make_request
+    return self._do_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/_http/__init__.py", line 379, in _do_request
+    return self.http.request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/transport/requests.py", line 537, in request
+    self.credentials.before_request(auth_request, method, url, request_headers)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/credentials.py", line 175, in before_request
+    self.refresh(request)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/oauth2/service_account.py", line 449, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/oauth2/_client.py", line 308, in jwt_grant
+    response_data = _token_endpoint_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/oauth2/_client.py", line 268, in _token_endpoint_request
+    response_status_ok, response_data, retryable_error = _token_endpoint_request_no_throw(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/oauth2/_client.py", line 215, in _token_endpoint_request_no_throw
+    request_succeeded, response_data, retryable_error = _perform_request()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/oauth2/_client.py", line 191, in _perform_request
+    response = request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/transport/requests.py", line 186, in __call__
+    response = self.session.request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2453, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-02-23T17:20:05.937+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=processing_sales, task_id=create_bronze_dataset, execution_date=20220802T010000, start_date=20240221T155212, end_date=20240223T172005
+[2024-02-23T17:20:06.047+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 40 for task create_bronze_dataset (Task received SIGTERM signal; 1500)
+[2024-02-23T17:20:06.153+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1500, status='terminated', exitcode=1, started='2024-02-21 15:52:12') (1500) terminated with exit code 1

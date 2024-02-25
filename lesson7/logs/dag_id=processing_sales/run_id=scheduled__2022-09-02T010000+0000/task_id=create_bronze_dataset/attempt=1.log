@@ -1,0 +1,18 @@
+[2024-02-25T12:01:34.893+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-09-02T01:00:00+00:00 [queued]>
+[2024-02-25T12:01:34.909+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-09-02T01:00:00+00:00 [queued]>
+[2024-02-25T12:01:34.910+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2024-02-25T12:01:34.931+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryCreateEmptyDatasetOperator): create_bronze_dataset> on 2022-09-02 01:00:00+00:00
+[2024-02-25T12:01:34.939+0000] {standard_task_runner.py:60} INFO - Started process 944 to run task
+[2024-02-25T12:01:34.943+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'create_bronze_dataset', 'scheduled__2022-09-02T01:00:00+00:00', '--job-id', '123', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmpyelk6dj8']
+[2024-02-25T12:01:34.945+0000] {standard_task_runner.py:88} INFO - Job 123: Subtask create_bronze_dataset
+[2024-02-25T12:01:35.015+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.create_bronze_dataset scheduled__2022-09-02T01:00:00+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T12:01:35.126+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='create_bronze_dataset' AIRFLOW_CTX_EXECUTION_DATE='2022-09-02T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-09-02T01:00:00+00:00'
+[2024-02-25T12:01:35.143+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T12:01:35.147+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T12:01:35.149+0000] {bigquery.py:469} INFO - datasetId was not specified in `dataset_reference`. Will use default value bronze.
+[2024-02-25T12:01:35.150+0000] {bigquery.py:469} INFO - projectId was not specified in `dataset_reference`. Will use default value de-07-natalia-sokil.
+[2024-02-25T12:01:35.151+0000] {bigquery.py:480} INFO - Creating dataset: bronze in project: de-07-natalia-sokil 
+[2024-02-25T12:01:35.629+0000] {bigquery.py:2041} INFO - Dataset bronze already exists.
+[2024-02-25T12:01:35.683+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=processing_sales, task_id=create_bronze_dataset, execution_date=20220902T010000, start_date=20240225T120134, end_date=20240225T120135
+[2024-02-25T12:01:35.718+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-25T12:01:35.754+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

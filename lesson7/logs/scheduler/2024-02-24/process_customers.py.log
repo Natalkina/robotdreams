@@ -1,0 +1,189 @@
+[2024-02-24T09:35:40.100+0000] {processor.py:161} INFO - Started process (PID=8502) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:35:40.114+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:35:40.136+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:35:40.135+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:35:40.177+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:35:40.237+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:35:40.236+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:35:40.314+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:35:40.314+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:35:40.404+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.308 seconds
+[2024-02-24T09:36:10.574+0000] {processor.py:161} INFO - Started process (PID=8559) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:36:10.575+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:36:10.578+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:10.577+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:36:10.596+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:36:10.614+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:10.613+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:36:10.634+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:10.634+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:36:10.651+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.081 seconds
+[2024-02-24T09:36:41.631+0000] {processor.py:161} INFO - Started process (PID=8616) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:36:41.632+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:36:41.636+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:41.636+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:36:41.686+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:36:41.719+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:41.718+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:36:41.774+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:36:41.774+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:36:41.801+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.174 seconds
+[2024-02-24T09:37:12.295+0000] {processor.py:161} INFO - Started process (PID=8673) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:37:12.296+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:37:12.298+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:12.298+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:37:12.314+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:37:12.330+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:12.330+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:37:12.350+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:12.350+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:37:12.367+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.075 seconds
+[2024-02-24T09:37:42.441+0000] {processor.py:161} INFO - Started process (PID=8730) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:37:42.442+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:37:42.445+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:42.444+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:37:42.461+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:37:42.479+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:42.478+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:37:42.500+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:37:42.500+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:37:42.517+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.079 seconds
+[2024-02-24T09:38:12.952+0000] {processor.py:161} INFO - Started process (PID=8787) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:38:12.953+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:38:12.956+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:12.956+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:38:12.976+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:38:12.996+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:12.996+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:38:13.020+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:13.019+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:38:13.073+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.125 seconds
+[2024-02-24T09:38:43.566+0000] {processor.py:161} INFO - Started process (PID=8844) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:38:43.567+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:38:43.570+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:43.570+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:38:43.588+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:38:43.607+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:43.607+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:38:43.632+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:38:43.631+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:38:43.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.090 seconds
+[2024-02-24T09:39:14.270+0000] {processor.py:161} INFO - Started process (PID=8901) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:39:14.271+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:39:14.273+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:14.273+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:39:14.291+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:39:14.308+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:14.308+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:39:14.330+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:14.329+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:39:14.350+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.083 seconds
+[2024-02-24T09:39:45.247+0000] {processor.py:161} INFO - Started process (PID=8958) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:39:45.248+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:39:45.250+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:45.250+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:39:45.268+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:39:45.286+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:45.285+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:39:45.308+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:39:45.307+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:39:45.325+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.081 seconds
+[2024-02-24T09:40:16.019+0000] {processor.py:161} INFO - Started process (PID=9015) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:40:16.020+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:40:16.023+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:16.022+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:40:16.040+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:40:16.059+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:16.058+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:40:16.079+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:16.079+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:40:16.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.081 seconds
+[2024-02-24T09:40:46.771+0000] {processor.py:161} INFO - Started process (PID=9072) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:40:46.772+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:40:46.775+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:46.775+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:40:46.819+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:40:46.850+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:46.850+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:40:46.913+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:40:46.913+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:40:46.965+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.198 seconds
+[2024-02-24T09:41:17.541+0000] {processor.py:161} INFO - Started process (PID=9129) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:41:17.542+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:41:17.545+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:17.544+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:41:17.561+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:41:17.577+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:17.577+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:41:17.607+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:17.607+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:41:17.626+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.087 seconds
+[2024-02-24T09:41:47.853+0000] {processor.py:161} INFO - Started process (PID=9186) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:41:47.853+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:41:47.855+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:47.855+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:41:47.871+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:41:47.888+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:47.887+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:41:47.907+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:41:47.907+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:41:47.925+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.075 seconds
+[2024-02-24T09:42:18.507+0000] {processor.py:161} INFO - Started process (PID=9243) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:42:18.508+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:42:18.510+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:18.510+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:42:18.527+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:42:18.544+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:18.543+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:42:18.565+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:18.565+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:42:18.582+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.078 seconds
+[2024-02-24T09:42:49.183+0000] {processor.py:161} INFO - Started process (PID=9300) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:42:49.184+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:42:49.187+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:49.186+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:42:49.202+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:42:49.218+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:49.218+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:42:49.242+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:42:49.242+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:42:49.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.082 seconds
+[2024-02-24T09:43:19.989+0000] {processor.py:161} INFO - Started process (PID=9357) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:43:19.990+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:43:19.993+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:19.992+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:43:20.008+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:43:20.025+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:20.024+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:43:20.045+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:20.045+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:43:20.066+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.080 seconds
+[2024-02-24T09:43:50.637+0000] {processor.py:161} INFO - Started process (PID=9414) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:43:50.638+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:43:50.640+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:50.640+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:43:50.655+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:43:50.672+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:50.671+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:43:50.691+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:43:50.691+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:43:50.708+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.074 seconds
+[2024-02-24T09:44:21.467+0000] {processor.py:161} INFO - Started process (PID=9471) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:44:21.468+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:44:21.471+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:21.470+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:44:21.487+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:44:21.508+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:21.508+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:44:21.528+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:21.527+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:44:21.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.081 seconds
+[2024-02-24T09:44:52.222+0000] {processor.py:161} INFO - Started process (PID=9534) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:44:52.223+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:44:52.226+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:52.225+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:44:52.241+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:44:52.257+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:52.257+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:44:52.277+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:44:52.277+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:44:52.297+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.077 seconds
+[2024-02-24T09:45:22.946+0000] {processor.py:161} INFO - Started process (PID=9591) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:45:22.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:45:22.949+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:22.949+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:45:22.965+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:45:22.982+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:22.981+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:45:23.002+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:23.001+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:45:23.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.076 seconds
+[2024-02-24T09:45:53.870+0000] {processor.py:161} INFO - Started process (PID=9648) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:45:53.871+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:45:53.873+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:53.873+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:45:53.890+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:45:53.907+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:53.907+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:45:53.926+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:45:53.926+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:45:53.944+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.077 seconds
+[2024-02-24T09:46:24.602+0000] {processor.py:161} INFO - Started process (PID=9705) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:46:24.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:46:24.607+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:24.607+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:46:24.627+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:46:24.648+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:24.647+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:46:24.677+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:24.677+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:46:24.700+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.101 seconds
+[2024-02-24T09:46:55.432+0000] {processor.py:161} INFO - Started process (PID=9762) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:46:55.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:46:55.435+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:55.434+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:46:55.452+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:46:55.470+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:55.470+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:46:55.492+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:46:55.492+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:46:55.515+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.086 seconds
+[2024-02-24T09:47:26.248+0000] {processor.py:161} INFO - Started process (PID=9819) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:47:26.249+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:47:26.251+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:26.251+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:47:26.268+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:47:26.284+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:26.284+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:47:26.305+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:26.304+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:47:26.323+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.078 seconds
+[2024-02-24T09:47:56.987+0000] {processor.py:161} INFO - Started process (PID=9876) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:47:56.988+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:47:56.993+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:56.993+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:47:57.022+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:47:57.053+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:57.052+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:47:57.090+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:47:57.090+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:47:57.120+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.142 seconds
+[2024-02-24T09:48:28.045+0000] {processor.py:161} INFO - Started process (PID=9933) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:48:28.046+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:48:28.049+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:28.049+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:48:28.074+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:48:28.102+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:28.101+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:48:28.133+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:28.133+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:48:28.162+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.121 seconds
+[2024-02-24T09:48:58.476+0000] {processor.py:161} INFO - Started process (PID=9990) to work on /opt/airflow/dags/process_customers.py
+[2024-02-24T09:48:58.477+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/process_customers.py for tasks to queue
+[2024-02-24T09:48:58.480+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:58.480+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:48:58.512+0000] {processor.py:840} INFO - DAG(s) 'process_customers' retrieved from /opt/airflow/dags/process_customers.py
+[2024-02-24T09:48:58.540+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:58.539+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2024-02-24T09:48:58.567+0000] {logging_mixin.py:188} INFO - [2024-02-24T09:48:58.567+0000] {dag.py:3820} INFO - Setting next_dagrun for process_customers to 2024-02-23T00:00:00+00:00, run_after=2024-02-24T00:00:00+00:00
+[2024-02-24T09:48:58.589+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/process_customers.py took 0.117 seconds

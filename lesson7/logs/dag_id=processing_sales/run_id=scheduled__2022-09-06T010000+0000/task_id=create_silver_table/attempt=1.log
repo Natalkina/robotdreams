@@ -1,0 +1,16 @@
+[2024-02-25T12:03:19.436+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.create_silver_table scheduled__2022-09-06T01:00:00+00:00 [queued]>
+[2024-02-25T12:03:19.447+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.create_silver_table scheduled__2022-09-06T01:00:00+00:00 [queued]>
+[2024-02-25T12:03:19.448+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2024-02-25T12:03:19.467+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryInsertJobOperator): create_silver_table> on 2022-09-06 01:00:00+00:00
+[2024-02-25T12:03:19.473+0000] {standard_task_runner.py:60} INFO - Started process 1041 to run task
+[2024-02-25T12:03:19.478+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'create_silver_table', 'scheduled__2022-09-06T01:00:00+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmpzqy31txk']
+[2024-02-25T12:03:19.479+0000] {standard_task_runner.py:88} INFO - Job 147: Subtask create_silver_table
+[2024-02-25T12:03:19.542+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.create_silver_table scheduled__2022-09-06T01:00:00+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T12:03:19.654+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='create_silver_table' AIRFLOW_CTX_EXECUTION_DATE='2022-09-06T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-09-06T01:00:00+00:00'
+[2024-02-25T12:03:19.672+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T12:03:19.678+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T12:03:19.680+0000] {bigquery.py:2806} INFO - Executing: {'query': {'query': '\n                        CREATE TABLE IF NOT EXISTS `de-07-natalia-sokil.silver.sales` (\n                         client_id STRING,\n                         purchase_date DATE,\n                         product_name STRING,\n                         price FLOAT64\n                        )\n                    ', 'useLegacySql': False}}'
+[2024-02-25T12:03:19.743+0000] {bigquery.py:1596} INFO - Inserting job ***_processing_sales_create_silver_table_2022_09_06T01_00_00_00_00_a5b14e1cf42d42e1ad8e028a3b0f4d12
+[2024-02-25T12:03:20.904+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=processing_sales, task_id=create_silver_table, execution_date=20220906T010000, start_date=20240225T120319, end_date=20240225T120320
+[2024-02-25T12:03:20.975+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-25T12:03:21.010+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

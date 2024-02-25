@@ -1,0 +1,16 @@
+[2024-02-25T12:19:28.455+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_customets.transform_data_to_silver scheduled__2022-08-04T01:00:00+00:00 [queued]>
+[2024-02-25T12:19:28.466+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_customets.transform_data_to_silver scheduled__2022-08-04T01:00:00+00:00 [queued]>
+[2024-02-25T12:19:28.467+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2024-02-25T12:19:28.484+0000] {taskinstance.py:2192} INFO - Executing <Task(BigQueryInsertJobOperator): transform_data_to_silver> on 2022-08-04 01:00:00+00:00
+[2024-02-25T12:19:28.491+0000] {standard_task_runner.py:60} INFO - Started process 1426 to run task
+[2024-02-25T12:19:28.495+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_customets', 'transform_data_to_silver', 'scheduled__2022-08-04T01:00:00+00:00', '--job-id', '198', '--raw', '--subdir', 'DAGS_FOLDER/process_customers.py', '--cfg-path', '/tmp/tmp77vh123t']
+[2024-02-25T12:19:28.497+0000] {standard_task_runner.py:88} INFO - Job 198: Subtask transform_data_to_silver
+[2024-02-25T12:19:28.553+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_customets.transform_data_to_silver scheduled__2022-08-04T01:00:00+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T12:19:28.661+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_customets' AIRFLOW_CTX_TASK_ID='transform_data_to_silver' AIRFLOW_CTX_EXECUTION_DATE='2022-08-04T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-04T01:00:00+00:00'
+[2024-02-25T12:19:28.673+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T12:19:28.680+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T12:19:28.681+0000] {bigquery.py:2806} INFO - Executing: {'query': {'query': "\n                    CREATE OR REPLACE TABLE `de-07-natalia-sokil.silver.customers` AS\n                    SELECT\n                        client_id,\n                        MAX(first_name) AS first_name,\n                        MAX(last_name) AS last_name,\n                        MAX(email) AS email,\n                        MAX(PARSE_DATE('%Y-%m-%d', registration_date)) AS registration_date,\n                        MAX(state) AS state\n                    FROM `de-07-natalia-sokil.bronze.customers`\n                    GROUP BY client_id\n                ", 'useLegacySql': False}}'
+[2024-02-25T12:19:28.736+0000] {bigquery.py:1596} INFO - Inserting job ***_processing_customets_transform_data_to_silver_2022_08_04T01_00_00_00_00_49901c82822c0cbeee38075033d0986a
+[2024-02-25T12:19:31.659+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=processing_customets, task_id=transform_data_to_silver, execution_date=20220804T010000, start_date=20240225T121928, end_date=20240225T121931
+[2024-02-25T12:19:31.681+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-25T12:19:31.703+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,46 @@
+[2024-02-25T11:26:19.306+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-09-01T01:00:00+00:00 [queued]>
+[2024-02-25T11:26:19.319+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-09-01T01:00:00+00:00 [queued]>
+[2024-02-25T11:26:19.320+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2024-02-25T11:26:19.338+0000] {taskinstance.py:2192} INFO - Executing <Task(GCSToBigQueryOperator): load_data_to_bronze> on 2022-09-01 01:00:00+00:00
+[2024-02-25T11:26:19.346+0000] {standard_task_runner.py:60} INFO - Started process 383 to run task
+[2024-02-25T11:26:19.351+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'load_data_to_bronze', 'scheduled__2022-09-01T01:00:00+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmplnuurnr8']
+[2024-02-25T11:26:19.353+0000] {standard_task_runner.py:88} INFO - Job 111: Subtask load_data_to_bronze
+[2024-02-25T11:26:19.418+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-09-01T01:00:00+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T11:26:19.509+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='load_data_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2022-09-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-09-01T01:00:00+00:00'
+[2024-02-25T11:26:19.522+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T11:26:19.527+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T11:26:19.528+0000] {gcs_to_bigquery.py:379} INFO - Using existing BigQuery table for storing data...
+[2024-02-25T11:26:19.577+0000] {gcs_to_bigquery.py:383} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'de-07-natalia-sokil', 'datasetId': 'bronze', 'tableId': 'sales'}, 'sourceFormat': 'CSV', 'sourceUris': ['gs://sokil_final_project/data/sales/2022-09-01/*.csv'], 'writeDisposition': 'WRITE_APPEND', 'ignoreUnknownValues': False, 'schema': {'fields': [{'name': 'CustomerId', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'PurchaseDate', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Product', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Price', 'type': 'STRING', 'mode': 'NULLABLE'}]}, 'skipLeadingRows': 1, 'fieldDelimiter': ',', 'quote': None, 'allowQuotedNewlines': False, 'encoding': 'UTF-8'}}
+[2024-02-25T11:26:19.580+0000] {bigquery.py:1596} INFO - Inserting job ***_processing_sales_load_data_to_bronze_2022_09_01T01_00_00_00_00_bd4f48a47a726af48f167cafa9512169
+[2024-02-25T11:26:20.526+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 442, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 952, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Uris gs://sokil_final_project/data/sales/2022-09-01/*.csv
+[2024-02-25T11:26:20.539+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=processing_sales, task_id=load_data_to_bronze, execution_date=20220901T010000, start_date=20240225T112619, end_date=20240225T112620
+[2024-02-25T11:26:20.556+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 111 for task load_data_to_bronze (404 Not found: Uris gs://sokil_final_project/data/sales/2022-09-01/*.csv; 383)
+[2024-02-25T11:26:20.569+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-25T11:26:20.598+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-25T11:54:37.706+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-09-01T01:00:00+00:00 [queued]>
+[2024-02-25T11:54:37.715+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-09-01T01:00:00+00:00 [queued]>
+[2024-02-25T11:54:37.716+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2024-02-25T11:54:37.729+0000] {taskinstance.py:2192} INFO - Executing <Task(GCSToBigQueryOperator): load_data_to_bronze> on 2022-09-01 01:00:00+00:00
+[2024-02-25T11:54:37.735+0000] {standard_task_runner.py:60} INFO - Started process 822 to run task
+[2024-02-25T11:54:37.739+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'processing_sales', 'load_data_to_bronze', 'scheduled__2022-09-01T01:00:00+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/process_sales.py', '--cfg-path', '/tmp/tmps0_tl4k_']
+[2024-02-25T11:54:37.740+0000] {standard_task_runner.py:88} INFO - Job 117: Subtask load_data_to_bronze
+[2024-02-25T11:54:37.796+0000] {task_command.py:423} INFO - Running <TaskInstance: processing_sales.load_data_to_bronze scheduled__2022-09-01T01:00:00+00:00 [running]> on host 9e4f31030bba
+[2024-02-25T11:54:37.883+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='processing_sales' AIRFLOW_CTX_TASK_ID='load_data_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2022-09-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-09-01T01:00:00+00:00'
+[2024-02-25T11:54:37.895+0000] {connection.py:234} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-02-25T11:54:37.900+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-02-25T11:54:37.902+0000] {gcs_to_bigquery.py:379} INFO - Using existing BigQuery table for storing data...
+[2024-02-25T11:54:37.954+0000] {gcs_to_bigquery.py:383} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'de-07-natalia-sokil', 'datasetId': 'bronze', 'tableId': 'sales'}, 'sourceFormat': 'CSV', 'sourceUris': ['gs://sokil_final_project/data/sales/2022-09-1/*.csv'], 'writeDisposition': 'WRITE_APPEND', 'ignoreUnknownValues': False, 'schema': {'fields': [{'name': 'CustomerId', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'PurchaseDate', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Product', 'type': 'STRING', 'mode': 'NULLABLE'}, {'name': 'Price', 'type': 'STRING', 'mode': 'NULLABLE'}]}, 'skipLeadingRows': 1, 'fieldDelimiter': ',', 'quote': None, 'allowQuotedNewlines': False, 'encoding': 'UTF-8'}}
+[2024-02-25T11:54:37.955+0000] {bigquery.py:1596} INFO - Inserting job ***_processing_sales_load_data_to_bronze_2022_09_01T01_00_00_00_00_073df48b6fe3542639cef63d3cfe78c6
+[2024-02-25T11:54:40.599+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=processing_sales, task_id=load_data_to_bronze, execution_date=20220901T010000, start_date=20240225T115437, end_date=20240225T115440
+[2024-02-25T11:54:40.643+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-25T11:54:40.672+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check
